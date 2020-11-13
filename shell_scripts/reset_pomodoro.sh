@@ -1,1 +1,1 @@
-rm ${HOME}/workspaces/tiny-care-python/status.json
+rm ${HOME}/workspaces/inky-pomodoro/status.json
