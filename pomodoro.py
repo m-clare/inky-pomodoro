@@ -38,13 +38,10 @@ def get_pomodoro_time(start_time):
     pt_in_cycle = time_since_start - completed_cycles * cycle_length
     num_tomato = int(pt_in_cycle // (pomodoro + small_break))
     if int(pt_in_cycle % (pomodoro + small_break)  >= pomodoro) and (num_tomato < 3):
-        print(num_tomato, "break time!")
         return (num_tomato, "break time!")
     elif (pt_in_cycle > (4 * pomodoro + 3 * small_break)):
-        print(num_tomato, "long break time")
         return (num_tomato, "looooong break time!")
     else:
-        print(num_tomato, "still working")
         return (num_tomato, "still working")
 
 def get_tomato_image(inky_display, image_num):
@@ -79,7 +76,7 @@ def get_text_image(inky_display, break_text):
 def check_display(inky_display, tomato, cycle, start_time):
     num_tomato, text = get_pomodoro_time(start_time)
     # check if status has changed
-    if num_tomato == tomato and text == cycle:
+    if text == cycle:
         return
     else:
         if text == "still working":
