@@ -1,1 +1,1 @@
-python3 ${HOME}/workspaces/tiny-care-python/pomodoro.py
+python3 ${HOME}/workspaces/inky-pomodoro/pomodoro.py
